@@ -1,5 +1,6 @@
 import { StyleSheet, View, TextInput, Button, Modal, Image } from "react-native"
 import { useState } from "react";
+
 export const GoalInput = (props) => {
     const [enteredGoalText, setEnteredGoalText] = useState('');
 
@@ -28,10 +29,10 @@ export const GoalInput = (props) => {
 
                 <View style={styles.buttonContainer}>
                     <View style={styles.button}>
-                        <Button title="Cancel" onPress={endGoalHandler} />
+                        <Button title="Cancel" onPress={endGoalHandler} color='#5e0acc' />
                     </View>
                     <View style={styles.button}>
-                        <Button title="Add goal" onPress={addGoalHandler} />
+                        <Button title="Add goal" onPress={addGoalHandler} color='#f31282' />
                     </View>
                 </View>
             </View>
@@ -45,15 +46,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 16,
-        backgroundColor:'#311b6b',
+        backgroundColor: '#311b6b',
     },
 
     textInput: {
         borderWidth: 1,
-        borderColor: '#ccccc',
+        color: 'black',
+        backgroundColor:'white',
+        borderColor: 'white',
         width: '100%',
         marginRight: 10,
         padding: 10,
+        borderRadius:10,
     },
 
     buttonContainer: {
